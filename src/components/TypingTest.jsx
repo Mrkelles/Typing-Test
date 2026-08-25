@@ -38,11 +38,13 @@ function shuffle(arr) {
 }
 
 async function fetchOneQuote() {
-  const res = await fetch("https://api.quotable.io/random");
+  const res = await fetch("https://dummyjson.com/quotes/random");
   if (!res.ok) throw new Error("bad status " + res.status);
   const data = await res.json();
-  if (!data || !data.content) throw new Error("no content field");
-  return data.content;
+  
+  if (!data || !data.quote) throw new Error("no quote field");
+  return data.quote;
+  
 }
 
 // Builds a text buffer of at least minChars by pulling quotes from the API,
@@ -109,6 +111,7 @@ export default function TypingTest() {
   const correctKeystrokesRef = useRef(0);
   const netCorrectRef = useRef(0);
   const fetchingMoreRef = useRef(false);
+  const isInitialMount = useRef(true);
 
   const loadFreshText = useCallback(async () => {
     setLoading(true);
@@ -119,9 +122,31 @@ export default function TypingTest() {
     setLoading(false);
   }, []);
 
+  const resetTest = useCallback(() => {
+    clearInterval(timerRef.current);
+    setStatus("idle");
+    setTyped("");
+    setResult(null);
+    setWpmHistory([]);
+    setLiveStats({ wpm: 0, accuracy: 100 });
+    setTimeLeft(duration.seconds);
+    loadFreshText().then(() => {
+      inputRef.current && inputRef.current.focus();
+    });
+  }, [duration.seconds, loadFreshText]);
+
   useEffect(() => {
     loadFreshText();
   }, [loadFreshText]);
+
+
+  useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+    resetTest();
+  }, [duration, resetTest]);
 
   useEffect(() => {
     if (status === "idle") setTimeLeft(duration.seconds);
@@ -183,19 +208,6 @@ export default function TypingTest() {
       if (remaining <= 0) finishTest();
     }, 200);
   }, [duration.seconds, finishTest]);
-
-  const resetTest = useCallback(() => {
-    clearInterval(timerRef.current);
-    setStatus("idle");
-    setTyped("");
-    setResult(null);
-    setWpmHistory([]);
-    setLiveStats({ wpm: 0, accuracy: 100 });
-    setTimeLeft(duration.seconds);
-    loadFreshText().then(() => {
-      inputRef.current && inputRef.current.focus();
-    });
-  }, [duration.seconds, loadFreshText]);
 
   const maybeTopUp = useCallback(
     (remainingChars) => {

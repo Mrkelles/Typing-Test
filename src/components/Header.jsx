@@ -21,7 +21,10 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <Link to="/">TypingTest</Link>
+        <Link to="/">
+          <img src="/logo.png" alt="Typingmeter Logo" />
+          Typingmeter
+        </Link>
       </div>
       <nav className={`nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>

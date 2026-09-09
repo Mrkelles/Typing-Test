@@ -461,8 +461,8 @@ export default function TypingTest() {
       <div className="tt-wrap">
         <div className="tt-header">
           <div>
-            <div className="tt-brand">TYPE<span>//</span>TEST</div>
-            <div className="tt-tagline">Timed typing test · live from api.quotable.io</div>
+            <div className="tt-brand"><span>T</span>yping<span>M</span>eter</div>
+            <div className="tt-tagline">The ultimate typing test</div>
           </div>
           {usingFallback && <div className="tt-badge">OFFLINE QUOTES</div>}
         </div>

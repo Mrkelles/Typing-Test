@@ -17,7 +17,7 @@
 ================================ */
 
 .about-hero {
-  padding: 90px 40px 100px;
+  padding: 5px 40px 100px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -481,7 +481,7 @@
 
 @media (max-width: 800px) {
   .about-hero {
-    padding: 65px 28px 70px;
+    padding: 0px 28px 70px;
   }
 
   .about-section {
@@ -511,7 +511,7 @@
 
 @media (max-width: 600px) {
   .about-hero {
-    padding: 45px 18px 55px;
+    padding: 0px 18px 55px;
   }
 
   .about-hero h1 {

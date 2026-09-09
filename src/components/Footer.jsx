@@ -4,7 +4,12 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>&copy; 2026 TypingTest. All rights reserved.</p>
+      <div className="footer-links">
+        <a href="/about">About Us</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Use</a>
+      </div>
+      <p>&copy; 2024 Typingmeter. All rights reserved.</p>
     </footer>
   );
 };

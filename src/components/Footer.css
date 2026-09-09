@@ -3,8 +3,25 @@
     padding: 1rem;
     background-color: var(--surface);
     border-top: 1px solid var(--border);
-    color: var(--text-dim);
+    color: var(--accent);
     position: absolute;
     bottom: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
   }
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--text);
+}

@@ -296,6 +296,7 @@ export default function TypingTest() {
           font-weight: 700;
           font-size: 18px;
           letter-spacing: 0.5px;
+          color: var(--text);
         }
         .tt-brand span { color: var(--accent); }
         .tt-tagline { color: var(--text-dim); font-size: 13px; }

@@ -1,0 +1,123 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.contact-us-page {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.contact-us-container {
+  width: min(100%, 1000px);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.contact-hero {
+  padding: 50px 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.contact-hero h1 {
+  font-size: clamp(42px, 7vw, 70px);
+  line-height: 105%;
+  letter-spacing: -2.5px;
+  font-weight: 500;
+}
+
+.contact-hero p {
+  max-width: 550px;
+  margin: 0 auto;
+  color: var(--text-dim);
+  line-height: 165%;
+}
+
+.contact-form-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.zf-templateWidth {
+  width: 100%;
+  border: 1px solid var(--border);
+  padding: 40px;
+  border-radius: 8px;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+.zf-tempFrmWrapper {
+  margin-bottom: 20px;
+}
+
+.zf-labelName {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.zf-form-sBox, 
+input[type="text"], 
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background-color: var(--surface-2);
+  color: var(--text);
+  font-size: 16px;
+}
+
+.zf-submitColor {
+  width: 100%;
+  background-color: white;
+  color: black;
+  border: 1px solid var(--primary);
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.zf-submitColor:hover {
+  background-color: transparent;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.zf-errorMessage {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.zf-nameWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.zf-nameWrapper span {
+  display: flex;
+  flex-direction: column;
+}
+
+.zf-salutation {
+  width: 25%;
+}
+
+.zf-nameWrapper > span:not(.zf-salutation) {
+  flex-grow: 1;
+}
+
+.zf-fmFooter {
+    margin-top: 20px;
+}

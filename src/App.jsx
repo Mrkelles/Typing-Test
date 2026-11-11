@@ -7,6 +7,8 @@ import AboutUs from './components/AboutUs';
 import TypingInfo from './components/TypingInfo';
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsOfUse from "./components/TermsOfUse";
+import { ContactUs } from "./components/ContactUs";
+import { Disclaimer } from "./components/Disclaimer";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfUse />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
         </Routes>
       </main>
       <Footer />

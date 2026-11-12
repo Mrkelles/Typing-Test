@@ -1,15 +1,16 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-links">
-        <a href="/about">About Us</a>
-        <a href="/contact">Contact Us</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Use</a>
-        <a href="/disclaimer">Disclaimer</a>
+        <Link to="/about">About Us</Link>
+        <Link to="/contact">Contact Us</Link>
+        <Link to="/privacy">Privacy Policy</Link>
+        <Link to="/terms">Terms of Use</Link>
+        <Link to="/disclaimer">Disclaimer</Link>
       </div>
       <p>&copy; 2024 Typingmeter. All rights reserved.</p>
     </footer>

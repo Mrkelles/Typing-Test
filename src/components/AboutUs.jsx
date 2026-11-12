@@ -1,4 +1,5 @@
 import "./AboutUs.css";
+import { Link } from "react-router-dom";
 
 const audiences = [
   {
@@ -80,10 +81,10 @@ export default function AboutUs() {
             make typing practice easy, useful, and accessible to everyone.
           </p>
 
-          <a href="#typing-test" className="about-hero-button">
+          <Link to="/" className="about-hero-button">
             Take a Typing Test
             <span>→</span>
-          </a>
+          </Link>
         </section>
 
         {/* Intro */}
@@ -367,10 +368,10 @@ export default function AboutUs() {
               to reach.
             </p>
 
-            <a href="#typing-test" className="about-final-button">
+            <Link to="/" className="about-final-button">
               Take the Typing Test
               <span>→</span>
-            </a>
+            </Link>
 
             <div className="about-motto">
               TYPE. <span>TEST.</span> IMPROVE.
